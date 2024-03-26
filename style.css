@@ -47,7 +47,7 @@ box-sizing: border-box;
 
 }
 
-.pincky{
+.pinky{
     background-color: pink;
 }
 .inky{
@@ -57,7 +57,8 @@ box-sizing: border-box;
     background-color: orange;
 }
 .pac-man {
-    background-color: yellow ;
+    background-color: rgb(191, 20, 108) ;
+    border-radius: 20px;
 }
 
 .scared-ghost{
