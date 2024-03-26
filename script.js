@@ -155,11 +155,35 @@ function powerPelletEater(){
 }
 
 
-function checkForGameOver(){
-    
-}
+// create ghosts using Ghosts class 
+ class Ghost {
+    constructor (className, startIndex, speed){
+        this.className = className;
+        this.startIndex = startIndex;
+        this.speed =  speed;
+        this.currentIndex = startIndex; 
+        this.isScared = false;
+        this.timerId = NaN; 
 
+    }
+ }
 
+// my ghosts 
 
+ghosts = [
+    new Ghost ('blinky', 348, 250 ),
+    new Ghost('pinky', 376, 400),
+    new Ghost('inky',351, 300),
+    new Ghost('clyde', 379, 500),
+
+]
+console.log(ghosts);
+
+// draw ghosts on the grid 
+
+ghosts.forEach(ghost => {
+    squares[ghost.currentIndex].classList.add(ghost.className);
+    squares[ghost.currentIndex].classList.add('ghost');
+});
 
 });
