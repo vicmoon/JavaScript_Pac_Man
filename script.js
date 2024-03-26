@@ -170,7 +170,7 @@ function powerPelletEater(){
 
 // my ghosts 
 
-ghosts = [
+let ghosts = [
     new Ghost ('blinky', 348, 250 ),
     new Ghost('pinky', 376, 400),
     new Ghost('inky',351, 300),
@@ -185,5 +185,40 @@ ghosts.forEach(ghost => {
     squares[ghost.currentIndex].classList.add(ghost.className);
     squares[ghost.currentIndex].classList.add('ghost');
 });
+
+// move ghosts randomly 
+
+ghosts.forEach(ghost => {
+    moveGhost(ghost);
+});
+
+function moveGhost(ghost){
+    console.log(ghost);
+    const directions = [-1, 1, width, -width]; 
+    let direction = directions[Math.floor(Math.random()* directions.length)];
+
+    ghost.timerId = setInterval(function(){
+        // if next square is not a ghost or wall 
+        if(
+        !squares[ghost.currentIndex + direction].classList.contains('ghost') &&
+        !squares[ghost.currentIndex + direction].classList.contains('wall'))
+        {
+            squares[ghost.currentIndex].classList.remove(ghost.className, 'ghost'); 
+            ghost.currentIndex += direction; 
+            squares[ghost.currentIndex].classList.add(ghost.className, 'ghost') 
+        }// else find a new random direction 
+        
+        else direction  = directions[Math.floor(Math.random()* directions.length)]
+    }, ghost.speed);
+}
+
+
+
+
+
+
+
+
+
 
 });
