@@ -5,9 +5,17 @@ body{
     align-items: center;
     justify-content: center;
     background-color: black;
-    margin-top: 150px;
+    margin-top: -10px;
     color: white;
-   
+    font-family: "Share Tech Mono", monospace;
+}
+
+  
+
+img{
+    display: flex;
+    width: 20%;
+    height: 20%;
 }
 
 .grid{
@@ -43,7 +51,7 @@ box-sizing: border-box;
 }
 
 .blinky{
-    background-color: yellow;
+    background-color: rgb(238, 2, 2);
 
 }
 
@@ -54,10 +62,10 @@ box-sizing: border-box;
     background-color:cyan ;
 }
 .clyde{
-    background-color: orange;
+    background-color: rgb(239, 167, 34);
 }
 .pac-man {
-    background-color: rgb(191, 20, 108) ;
+    background-color: yellow ;
     border-radius: 20px;
 }
 
